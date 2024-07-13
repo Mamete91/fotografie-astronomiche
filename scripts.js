@@ -29,7 +29,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
                     url: photoUrl
                 }).catch(console.error);
             } else {
-                prompt('Copia questo link per condividerlo:', photoUrl);
+                const dummy = document.createElement('textarea');
+                document.body.appendChild(dummy);
+                dummy.value = photoUrl;
+                dummy.select();
+                document.execCommand('copy');
+                document.body.removeChild(dummy);
+                alert('Link copiato negli appunti: ' + photoUrl);
             }
         });
     });
