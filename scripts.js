@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         button.addEventListener('click', function (event) {
             event.preventDefault();
             const photoName = this.getAttribute('data-photo');
-            const photoUrl = window.location.origin + '/images/' + photoName;
+            const photoUrl = `${window.location.origin}/${window.location.pathname.replace(/\/$/, '')}/images/${photoName}`;
             const shareText = `Guarda questa foto astronomica: ${photoUrl}`;
             if (navigator.share) {
                 navigator.share({
