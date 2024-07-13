@@ -39,6 +39,7 @@ main {
     height: auto;
     border: 2px solid #ffffff;
     border-radius: 5px;
+    cursor: pointer;  /* Aggiungi il puntatore per indicare che è cliccabile */
 }
 
 .social-share {
@@ -74,8 +75,9 @@ main {
 .modal-content {
     margin: auto;
     display: block;
-    width: 80%;
-    max-width: 700px;
+    width: 90%;
+    max-width: 90%;
+    height: auto;
 }
 
 .close {
