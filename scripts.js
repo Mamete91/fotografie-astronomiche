@@ -16,6 +16,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
         modal.style.display = "none";
     };
 
+    modalImg.onclick = function () {
+        modal.style.display = "none";
+    };
+
     document.querySelectorAll('.share-button').forEach(button => {
         button.addEventListener('click', function (event) {
             event.preventDefault();
