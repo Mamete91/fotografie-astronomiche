@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const modalImg = document.getElementById("modal-img");
     const captionText = document.getElementById("caption");
     const closeBtn = document.getElementsByClassName("close")[0];
-    const modalCloseButton = document.querySelector('.modal-close-button');
 
     document.querySelectorAll('.photo-img').forEach(photo => {
         photo.addEventListener('click', function () {
@@ -12,10 +11,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
 
     closeBtn.onclick = function () {
-        modal.style.display = "none";
-    };
-
-    modalCloseButton.onclick = function () {
         modal.style.display = "none";
     };
 
