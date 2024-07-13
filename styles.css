@@ -32,14 +32,20 @@ main {
 
 .photo {
     position: relative;
+    text-align: center;
 }
 
 .photo-img {
-    max-width: 300px;
+    max-width: 400px; /* Increased size for larger previews */
     height: auto;
     border: 2px solid #ffffff;
     border-radius: 5px;
-    cursor: pointer;  /* Aggiungi il puntatore per indicare che è cliccabile */
+    cursor: pointer;
+}
+
+.photo-title {
+    margin-top: 10px;
+    font-size: 1.2em;
 }
 
 .social-share {
