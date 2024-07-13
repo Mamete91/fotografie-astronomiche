@@ -7,9 +7,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     document.querySelectorAll('.photo-img').forEach(photo => {
         photo.addEventListener('click', function () {
-            modal.style.display = "block";
-            modalImg.src = this.src;
-            captionText.innerHTML = this.alt;
+            openModal(this.src, this.alt);
         });
     });
 
@@ -25,12 +23,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
         button.addEventListener('click', function (event) {
             event.preventDefault();
             const photoName = this.getAttribute('data-photo');
-            const photoUrl = `${window.location.origin}/${window.location.pathname.replace(/\/$/, '')}/images/${photoName}`;
-            const shareText = `Guarda questa foto astronomica: ${photoUrl}`;
+            const photoUrl = `${window.location.origin}${window.location.pathname}?image=${photoName}`;
             if (navigator.share) {
                 navigator.share({
                     title: 'Fotografia Astronomica',
-                    text: shareText,
+                    text: `Guarda questa foto astronomica: ${photoName}`,
                     url: photoUrl
                 }).catch(console.error);
             } else {
@@ -44,4 +41,23 @@ document.addEventListener('DOMContentLoaded', (event) => {
             }
         });
     });
+
+    function openModal(src, alt) {
+        modal.style.display = "block";
+        modalImg.src = src;
+        captionText.innerHTML = alt;
+    }
+
+    function checkForImageParam() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const imageName = urlParams.get('image');
+        if (imageName) {
+            const imageElement = document.querySelector(`img[src='images/${imageName}']`);
+            if (imageElement) {
+                openModal(imageElement.src, imageElement.alt);
+            }
+        }
+    }
+
+    checkForImageParam();
 });
