@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Mie Foto Astronomiche</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Le Mie Foto Astronomiche</h1>
+    </header>
+    <main>
+        <div class="gallery">
+            <!-- Le foto saranno inserite qui -->
+            <div class="photo">
+                <img src="images/Rho-Ophiuchi.jpg" alt="Rho-Ophiuchi" class="photo-img">
+                <div class="social-share">
+                    <a href="#" class="share-button" data-photo="astro1.jpg">Condividi</a>
+                </div>
+            </div>
+            <div class="photo">
+                <img src="images/M57.PNG" alt="M57" class="photo-img">
+                <div class="social-share">
+                    <a href="#" class="share-button" data-photo="astro2.jpg">Condividi</a>
+                </div>
+            </div>
+            <!-- Aggiungi altre foto in modo simile -->
+        </div>
+    </main>
+
+    <!-- Modal per visualizzare le immagini a schermo intero -->
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+        <div id="caption"></div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

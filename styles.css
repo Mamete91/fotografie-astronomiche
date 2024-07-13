@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+}
+
+header {
+    background-color: #111;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 4em; /* Cambia questa dimensione come preferisci */
+    margin: 0;
+    padding: 20px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.photo {
+    margin: 10px;
+    border: 1px solid #333;
+    padding: 10px;
+    background-color: #222;
+    width: 300px;
+}
+
+.photo img {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+.social-share {
+    margin-top: 10px;
+    text-align: center;
+}
+
